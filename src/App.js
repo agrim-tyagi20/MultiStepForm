@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Layout from "./components/Layout";
+import { CssBaseline, Container, Paper, Box } from "@material-ui/core";
+import Navbar from "./components/Navbar"
+import "./components/CSS/style.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+  <Navbar/>
+  <CssBaseline />
+      <Container style={{width:"90%"}} >
+        <Paper component={Box} p={3} style={{padding:"2rem 4rem",height:"54rem"}}>
+          <Layout />
+        </Paper>
+      </Container>
+    </>
   );
 }
 
